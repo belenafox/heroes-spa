@@ -1,0 +1,26 @@
+<h1>{{heroe.nombre | uppercase }}</h1>
+
+
+<div class="row">
+
+  <div class="col-md-4 imagen-heroe">
+
+    <img [src]="heroe.img" [alt]="heroe.nombre">
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Volver</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{heroe.nombre}}</h3>
+    <hr>
+    <p>
+      {{heroe.bio}}
+    </p>
+
+    <div class="logo-casa">
+      <img class="img-responsive" *ngIf="heroe.casa=== 'DC'" src="assets/img/DC.png" alt="">
+      <img class="img-responsive" *ngIf="heroe.casa=== 'Marvel'" src="assets/img/Marvel.png" alt="">
+    </div>
+  </div>
+
+</div>
